@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection"content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>Document</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		#demo{position: fixed;top: 0;left: 0;bottom: 0;right: 0;
+	background: #000;
+	display: -webkit-box; /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法： Chrome 21+ */
+    display: flex; /* 新版本语法： Opera 12.1, Firefox 22+ */
+
+    /*垂直居中*/
+    /*老版本语法*/
+   -webkit-box-align: center;-moz-box-align: center;
+    /*混合版本语法*/
+   -ms-flex-align: center;
+    /*新版本语法*/
+   -webkit-align-items: center;
+    align-items: center;
+
+    /*水平居中*/
+    /*老版本语法*/
+   -webkit-box-pack: center;-moz-box-pack: center;
+    /*混合版本语法*/
+   -ms-flex-pack: center;
+    /*新版本语法*/
+   -webkit-justify-content: center;
+    justify-content: center;
+
+		}
+		#demo img{width: 100%;}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<img src="demo.jpg" alt="">
+	</div>
+	<script src="../../libs/zepto.min.js"></script>
+	<script src="../../libs/hammer.min.js"></script>
+	<script src="avatorEditor.js"></script>
+	<script type="text/javascript">
+		new avatorEditor({
+			editor:'demo'
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+.home-body {
+    background: #e6e3ea;
+    /* Old browsers */
+    
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #e6e3ea), color-stop(56%, #eedfd6), color-stop(99%, #d7bab6));
+    /* Chrome,Safari4+ */
+    
+    background: -webkit-linear-gradient(left, #e6e3ea 0%, #eedfd6 56%, #d7bab6 99%);
+    /* Chrome10+,Safari5.1+ */
+    
+    background: linear-gradient(to right, #e6e3ea 0%, #eedfd6 56%, #d7bab6 99%);
+    /* W3C */
+}
+/**
+ * icon list
+ */
+
+.icon-send {
+    width: 27px;
+    height: 20px;
+    background-position: -33px 0;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    position: relative;
+    left: -2px;
+}
+.icon-single {
+    width: 16px;
+    height: 16px;
+    background-position: 0 0;
+}
+.icon-info {
+    width: 10px;
+    height: 12px;
+    background-position: 0 -22px;
+}
+.icon-address {
+    width: 10px;
+    height: 12px;
+    background-position: -19px -20px;
+}
+.icon-collect {
+    width: 20px;
+    height: 13px;
+    background-position: 2px -38px;
+}
+
+.friend-card .detail .btn-active .icon-collect{
+    background-position:2px -208px;
+}
+.icon-share {
+    width: 12px;
+    height: 13px;
+    background-position: -19px -39px;
+}
+.icon-matcher {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-position: 2px -162px;
+}
+.home-nav {
+    height: 52px;
+    padding-top: 8px;
+    position: relative;
+}
+.home-nav .my-info {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    /*left: 70px;*/
+    
+    pointer-events: none;
+    left: 100px;
+    opacity: 0;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+}
+.home-nav .my-info.active {
+    left: 70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.home-nav .my-info h3 {
+    font-size: 16px;
+    color: #F05B61;
+    font-weight: bold;
+    padding-top: 3px;
+}
+.home-nav .my-info p {
+    font-size: 14px;
+    color: #5B5B5B;
+}
+.home-nav-fixed {
+    position: fixed;
+    width: 100%;
+    height: 52px;
+    padding-top: 8px;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 996;
+    -webkit-transform: translate(0, 0) translateZ(0);
+    transform: translate(0, 0) translateZ(0);
+    -webkit-transition: -webkit-transform .2s;
+    transition: transform .2s;
+}
+.top-tab {
+    /*width: 210px;*/
+    
+    height: 36px;
+    background: #E9E7E6;
+    border-radius: 18px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 72px;
+    color: #1B1B1B;
+    padding: 0 4px;
+}
+.top-tab li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #898988;
+    border-radius: 15px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.top-tab li.active {
+    background: #fff;
+    color: #1B1B1B;
+}
+.my-avator {
+    overflow: hidden;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    left: 17px;
+    top: 8px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*红娘列表*/
+
+.matchers-list {
+    margin: 0 10px;
+}
+.matchers-list .linear {
+    display: block;
+    width: 1px;
+    height: 25px;
+    margin-left: 23.5px;
+    background: #e1dce1;
+    /* Old browsers */
+    
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e1dce1), color-stop(98%, #524143));
+    /* Chrome,Safari4+ */
+    
+    background: -webkit-linear-gradient(top, #e1dce1 0%, #524143 98%);
+    /* Chrome10+,Safari5.1+ */
+    
+    background: linear-gradient(to bottom, #e1dce1 0%, #524143 98%);
+    /* W3C */
+}
+.matchers-list .linear.reverse {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    height: 10px;
+}
+.matcher-info-wrap {
+    height: 47px;
+    margin: 3px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.matcher-avator {
+    position: relative;
+    width: 47px;
+    height: 47px;
+    /*overflow: hidden;*/
+    
+    border-radius: 24px;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, .18);*/
+    
+    float: left;
+    margin-right: 10px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*.matcher-avator i {
+    position: absolute;
+    font-size: 12px;
+    width: 200%;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    background: #ee5c64;
+    left: -23.5px;
+    bottom: -3px;
+    text-align: center;
+    -webkit-transform: scale(0.67);
+    transform: scale(0.67);
+}*/
+
+.matcher-info-wrap h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.matcher-info-wrap .text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.matcher-info-wrap p {
+    color: #5B5B5B;
+    font-size: 14px;
+}
+.matcher-info-wrap .msg {
+    display: block;
+    width: 28px;
+    height: 20px;
+    background-image: url(../images/icon-msg.png);
+    -webkit-background-size: 28px auto;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+/*红娘好友*/
+
+.swipe-wrap {
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .11);
+    border-radius: 10px;
+    margin-top: 6px;
+}
+.swipe-wrap:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 6px;
+    border-color: transparent transparent #ee5c64;
+    border-style: dashed dashed solid;
+    top: -12px;
+    left: 18px;
+}
+.swipe-tab {
+    height: 42px;
+    background: #ee5c64;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.swipe-tab ul {
+    padding-top: 6px;
+    width: 3000px;
+    visibility: hidden;
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+.swipe-tab li {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    border: 2px solid #ee5c64;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: border .2s;
+    transition: border .2s;
+}
+.swipe-tab li.active {
+    border: 2px solid #FDCD31;
+}
+.swipe-tab li i.icon-single {
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+.swipe-content {
+    height: 188px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #fff;
+    /*   padding: 0 20px;*/
+}
+.swipe-content:active {
+    background: #F2F2F2;
+}
+.swipe-content-in {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+}
+.swipe-content-in>ul {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-content-in>ul>li {
+    position: relative;
+    float: left;
+}
+.friend-card {} .friend-card .desc {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #171D1F;
+    margin-bottom: 8px;
+    height: 58px;
+    overflow: hidden;
+}
+.friend-card .desc-in {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.friend-card-in {
+    padding: 0 20px;
+}
+.friend-card-in .link {
+    display: block;
+}
+.friend-card .pic {
+    background-color: #eee;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+}
+.friend-card .detail {
+    -webkit-box-flex: 1;
+    -webkit-flex: ;
+    flex: ;
+    padding-left: 12px;
+}
+.friend-card .detail h3 {
+    font-size: 16px;
+    color: #ee5c64;
+    font-weight: 600;
+    padding: 5px 0;
+}
+.friend-card .detail p {
+    font-size: 12px;
+    color: #7B7B7B;
+    line-height: 18px;
+    height: 18px;
+    overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+.friend-card .detail p i {
+    vertical-align: -4px;
+    margin-right: 3px;
+}
+.friend-card .detail p i.icon-address {
+    vertical-align: -2px;
+}
+.friend-card .detail .btn {
+    display: inline-block;
+    width: 54px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid #B5B5B5;
+    margin-top: 10px;
+    line-height: 26px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+.friend-card .detail .btn-active{background-color:#EE5C64;border: 1px solid #EE5C64; }
+.friend-card .detail .btn[data-type='favorite'] {
+    margin-right: 18px;
+}
+.friend-card .detail .btn:active {
+    background-color: #eee;
+}
+.scroll-view {
+    background: none;
+    border: none;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+    color: #888;
+    width: 100%;
+    font-size: 14px;
+}
+@media only screen and (max-device-width: 640px) {} .single-friends {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 52px;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+.single-friends.active {
+    background-color: rgba(0, 0, 0, .65);
+}
+.single-friends .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #EFEFEF;
+    -webkit-transform: translate(0, -100%) translateZ(0);
+    transform: translate(0, -100%) translateZ(0);
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    max-height: 325px;
+    overflow: hidden;
+}
+.single-friends.active .list {
+    -webkit-transform: translate(0, 0) translateZ(0);
+    transform: translate(0, 0) translateZ(0);
+}
+.single-friends .list .in {
+    margin: 16px;
+}
+.single-friends .list li {
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    font-size: 0;
+}
+.single-friends .list li a {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+.single-friends .list li a.add-btn {
+    background-image: url(../images/upload-btn.png);
+    -webkit-background-size: 60%;
+    background-size: 60%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+.single-friends .list li a.add-btn:active {
+    background-color: #ccc;
+}
+.single-friends .list li:nth-child(3n+1) {
+    text-align: left;
+}
+.single-friends .list li:nth-child(3n) {
+    text-align: right;
+}
+.single-friends .list li h3, .single-friends .list li span {
+    display: inline-block;
+    width: 75px;
+    overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.single-friends .list li h3 {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 5px;
+}
+.single-friends .list li span {
+    padding-bottom: 5px;
+    font-size: 12px;
+    color: #888;
+    text-align: left;
+}
+.lock-scroll, .lock-scroll body {
+    /*width: 100%;height: 100%;overflow: hidden;*/
+}
+/*没有数据*/
+
+.empty-data {
+    text-align: center;
+    position: absolute;
+    top: 52px;
+    bottom: 52px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: #F3F4F6;
+}
+.empty-data > div{
+    margin-top:-100px; 
+}
+.empty-data .icon-empty {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/icon-empty.png);
+    -webkit-background-size: 80px auto;
+    background-size: 80px auto;
+    border-radius: 40px;
+    background-color: #D2D6D9;
+}
+.empty-data .icon-empty-friend {
+    background-position: 0 0;
+}
+.empty-data .icon-empty-collect{
+    background-position: 0 -76px;
+}
+.empty-data p {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 0 10px;
+}
+.empty-data .btn {
+    font-size: 14px;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    color:#fff;
+}

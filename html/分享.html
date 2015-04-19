@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="javascript:share.tweibo();">腾讯微博</a>
+        </li>
+        <li><a href="javascript:share.qzone();">腾讯空间</a>
+        </li>
+        <li><a href="javascript:share.sweibo();">新浪微博</a>
+        </li>
+    </ul>
+</body>
+
+<script>
+var share = {
+	url: window.location.href,
+	title:encodeURIComponent('我是title'),
+	summary:encodeURIComponent('我是summary'),
+	pic:encodeURIComponent('http://c.hiphotos.baidu.com/news/q%3D100/sign=63543db96309c93d01f20af7af3cf8bb/d01373f082025aaf0e4c097cffedab64034f1a0e.jpg'),
+	sweibo: function(){
+		window.location = 'http://service.weibo.com/share/share.php?url='+share.url+'&scene=6&appkey=&title='+share.title+'&pic='+share.pic+'&language=zh_cn';
+	},
+	qzone: function(){
+		window.location = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + share.url + '&site=&title=' + share.title + '&pics='+share.pic+'&summary='+share.summary;
+	},
+	tweibo: function(){
+		window.location = 'http://share.v.t.qq.com/index.php?c=share&a=index&url='+share.url+'&appkey=&title='+share.title+'&pic='+share.pic+'&line1=';
+	}
+}
+
+</script>
+
+</html>

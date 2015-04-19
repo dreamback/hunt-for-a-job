@@ -1,0 +1,101 @@
+#datePlugin {
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111111;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+}
+
+#datePlugin.active{
+  background: rgba(0, 0, 0, .5)
+}
+#datePlugin.active .d-date-box{
+    -webkit-transform: translate(0, 0) translateZ(0);
+    transform: translate(0, 0) translateZ(0);
+}
+#datePlugin * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-clip: padding-box;
+}
+#datePlugin .d-date-box {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    -webkit-transform: translate(0, 100%) translateZ(0);
+    transform: translate(0, 100%) translateZ(0);
+
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+#datePlugin .d-date-info {
+    padding-top: 10px;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+}
+#datePlugin .d-date-wrap {
+    margin-top: 10px;
+    width: 100%;
+    height: 135px;
+    position: relative;
+}
+#datePlugin .d-time-wrap {
+    border-top: 1px solid #f70;
+}
+#datePlugin .d-time-wrap .d-date-cell {
+    width: 50%;
+}
+#datePlugin .d-date-mark {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+}
+#datePlugin .d-date-cell {
+    float: left;
+    width: 33.33333%;
+    height: 100%;
+    overflow: hidden;
+}
+#datePlugin .d-date-cell li {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+#datePlugin .d-date-btns .d-btn {
+    background: #f70;
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 0;
+}
+#datePlugin .d-date-btns #d-okBtn {
+    background: #4ABD69;
+    /*border-bottom-left-radius: 5px;*/
+}
+#datePlugin .d-date-btns #d-cancleBtn {
+    border-right: 1px solid #ddd;
+    background: #B3B0B0;
+    /* border-bottom-right-radius: 5px;*/
+}
+#datePlugin li {
+    color: #999;
+}
+#datePlugin li.current {
+    color: #000;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>手机验证</title>
+    <link rel="stylesheet" href="..src/css/global.css">
+    <link rel="stylesheet" href="..src/js/widget/modal/modal.css">
+    <link rel="stylesheet" href="..src/css/userGuide.css">
+</head>
+
+<body>
+    <div class="form-group form-group-offset border-t1px border-b1px form-group-last">
+        <div class="form-group-item" id="textareaInput">
+            <i class="form-icon form-icon-slogan"></i>
+            <div class="form-wrap border-b1px">
+                <!-- <label>手机号：</label> -->
+                <input type="text" name="" id="Phone" placeholder="手机号">
+                <a href="javascript:;" class="btn-code" id="getCode">获取验证码</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-group border-t1px border-b1px form-group-last">
+        <div class="form-group-item" id="textareaInput">
+            <i class="form-icon form-icon-code"></i>
+            <div class="form-wrap border-b1px">
+                <!-- <label>验证码：</label> -->
+                <input type="text" name="" id="" placeholder="验证码">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="btn-fluid">
+            <input class="btn" type="button" value="确定" id="closeSingle">
+        </div>
+    </div>
+    <script src="..src/js/libs/zepto.min.js"></script>
+    <script src="..src/js/widget/modal/modal.js"></script>
+    <script>
+    function cutDown(target, dur) {
+        var text = 's后重新获取';
+        dur = dur || 60;
+        target.innerHTML = dur + text;
+        target.className = 'btn-code btn-disable';
+        var interval = setInterval(function() {
+            if (dur--) {
+                target.innerHTML = dur + text;
+            } else {
+                target.className = 'btn-code';
+                target.innerHTML = '重新获取';
+                clearInterval(interval);
+            }
+        }, 1000);
+    };
+
+    function isMobile(num) {
+        return (/^1[3|5|7|8][0-9]\d{8}$/.test(num));
+    };
+
+    $('#getCode').click(function() {
+        var phone = $.trim($('#Phone').val());
+        if (!isMobile(phone)) {
+            new Modal({
+                model: 'popup',
+                type: 'danger',
+                content: !phone.length?'手机号不能为空！':'手机号格式不正确！'
+            });
+            return;
+        }
+        if ($(this).hasClass('btn-disable')) return;
+        cutDown(this);
+    });
+    </script>
+</body>
+
+</html>

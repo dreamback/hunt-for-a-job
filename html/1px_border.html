@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <style>
+		li{
+			height: 60px;
+			border: 1px solid #333;
+			margin-bottom: 10px;
+		}
+    </style>
+</head>
+
+<body>
+    <script>
+    	(function(){
+    		var doc = document,
+    			meta = doc.createElement('meta'),
+    			dpr = window.devicePixelRatio || 1,
+    			scale = 1/dpr;
+    		meta.setAttribute('name', 'viewport');
+    		meta.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    		doc.documentElement.firstElementChild.appendChild(meta);
+    		doc.body.style.fontSize = (12 * dpr) + 'px';
+    	})();
+    </script>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <a href="weixin://qr">fdsafds</a>
+</body>
+
+</html>

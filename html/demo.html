@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <link rel="stylesheet" href="//images.zastatic.com/css/normalize.css" />
+    <link rel="stylesheet" href="//images.zastatic.com/js/widget/modal/modal.css?fdasfc">
+</head>
+
+<body>
+
+
+    <!--   <div class="modal modal-confirm modal-active">
+  <div class="modal-dialog">
+    <div class="modal-hd">Amaze UI</div>
+    <div class="modal-bd">
+      你，确定要删除这条记录吗？
+    </div>
+    <div class="modal-footer">
+      <span class="modal-btn" data-modal-cancel>取消</span>
+      <span class="modal-btn" data-modal-confirm>确定</span>
+    </div>
+  </div>
+</div> -->
+
+    <!-- <div class="modal modal-popup modal-active">
+  <div class="pupop pupop-info">fdsafs</div>
+</div> -->
+    <div class="modal-footer"></div>
+    <div id="demo"></div>
+    <button>fdsafsd</button>
+    <script src="//images.zastatic.com/js/libs/zepto.min.js"></script>
+    <script src="//images.zastatic.com/js/widget/modal/modal.js"></script>
+    <script>
+    $('button').click(function() {
+        new Modal({
+            model:'loading' 
+        });
+    })
+    </script>
+
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br />Longitude: " + position.coords.longitude;
+    }
+
+    getLocation();
+    </script>
+</body>
+
+</html>

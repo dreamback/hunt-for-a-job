@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <style>
+    .progress-circle {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: #7f7f7f;
+        background-size: cover;
+    }
+    .progress-circle .progress-pie {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+    }
+    .progress-circle .progress-pie-left,
+    .progress-circle .progress-pie-right {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .progress-circle .progress-left,
+    .progress-circle .progress-right {
+        width: 200px;
+        height: 200px;
+        background: #262626;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .progress-circle .progress-pie-right,
+    .progress-circle .progress-right {
+        clip: rect(0, auto, auto, 100px);
+    }
+    .progress-circle .progress-pie-left,
+    .progress-circle .progress-left {
+        clip: rect(0, 100px, auto, 0);
+    }
+    .progress-circle .progress-mask {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #4c4c4c;
+    }
+    .progress-circle .progress-number {
+        position: relative;
+        z-index: 2;
+        font-size: 20px;
+        color: #fff;
+    }
+    .progress-circle .progress-number:after {
+        content: '%';
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress-circle center">
+        <div class="progress-pie">
+            <div class="progress-pie-left">
+                <div class="progress-left" style="transform: rotate(118.8deg);"></div>
+            </div>
+            <div class="progress-pie-right">
+                <div class="progress-right" style="transform: rotate(180deg);"></div>
+            </div>
+            <div class="progress-mask horizental-center vertical-center">
+                <span class="progress-number">83</span>
+            </div>
+        </div>
+    </div>
+
+
+    <input type="file" accept="image/*" name="" id="File">
+    <div id="demo"></div>
+    <script src="exif.js"></script>
+    <script src="imgcompress.js"></script>
+    <script type="text/javascript">
+    var demo = document.getElementById('demo');
+    imgCompress('File', 600, function(base64) {
+        var img = new Image;
+        img.src = base64;
+        img.onload = function() {
+            demo.innerHTML = '';
+            demo.appendChild(this);
+        }
+    });
+    </script>
+</body>
+
+</html>

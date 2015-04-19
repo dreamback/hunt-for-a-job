@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>填写信息2/2</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/postUser_v2.css">
+</head>
+
+<body>
+
+    <!-- 第二步 start -->
+    <div class="wrapper-upload">
+        <p class="upload-tip">上传TA的照片<span>（建议选择大头照，越清晰越好）</span>
+        </p>
+        <ul class="upload-btns" id="uploadFiles">
+            <li><span><input type="file" accpet="image/jpg" data-index="0"></span>
+            </li>
+            <li><span><input type="file" accpet="image/jpg" data-index="1"></span>
+            </li>
+            <li><span><input type="file" accpet="image/jpg" data-index="2"></span>
+            </li>
+        </ul>
+        <div class="btns-item">
+            <a class="btn btn-gray" href="">上一步</a>
+            <a class="btn" href="">发布预览</a>
+        </div>
+    </div>
+    <!-- 第二步 end -->
+    <script src="../src/js/libs/zepto.min.js"></script>
+    <script>
+    var imgsBase64 = new Array(3);
+
+    function isEmpty() {
+        for (var i = 0, len = imgsBase64.length; i < len; i++) {
+            if (imgsBase64[i]) return true;
+        }
+    }
+
+    function readFile(file, target, index) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            imgsBase64[index] = reader.result;
+            target.style.backgroundImage = 'url(' + reader.result + ')';
+            target.style.backgroundSize = 'cover';
+            target.style.webkitBackgroundSize = 'cover';
+        }
+
+        reader.readAsDataURL(file);
+    };
+    $('#uploadFiles input').change(function(e) {
+        readFile(e.target.files[0], $(this).parent()[0], $(this).data('index'));
+    });
+    </script>
+</body>
+
+</html>

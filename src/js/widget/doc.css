@@ -1,0 +1,230 @@
+/* ==========================================================================
+   Component: Base
+ ============================================================================ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 0;margin: 0;
+}
+html{font-size: 62.5%;}
+html,
+body {
+  min-height: 100%;
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+  font-size: 1.6rem;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove text-decoration
+ */
+ins,
+a {
+  text-decoration: none;
+}
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+  * 1. Corrects max-width behavior (2.) if padding and border are used
+  * 2. Responsiveness: Sets a maxium width relative to the parent and auto scales the height
+  * 3. Remove the gap between images and the bottom of their containers
+  */
+img {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  height: auto;
+  /* 2 */
+  vertical-align: middle;
+  /* 3 */
+  border: 0
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.doc {
+    padding: 20px;
+}
+.doc>h1,.doc>article{padding-left: 55px;}
+.doc>h2 {
+	  counter-increment: header2;
+    font-size: 16px;
+    position: relative;
+
+    background: #ddd;
+    color: #444;
+	height: 44px;line-height: 44px;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    margin-left: 22px;
+    padding-left: 36px;
+}
+.doc>h2:hover:before {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.doc>h2:before {
+    content: counter(header2);
+    /*counter-increment: 1;*/
+    position: absolute;
+	font-size: 16px;
+	left: -22px;background: #87ceeb;
+	width: 52px;height: 52px;text-align: center;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 26px;
+    -webkit-border-radius: 26px;
+    border-radius: 26px;
+    top: -4px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+button{padding: 10px;}
+article{padding: 10px;}
+p{padding: 10px 0;}
+table th,table td{padding: 10px;border: 1px solid #ccc;}
+table th{background: #eee;text-align: left;}

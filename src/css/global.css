@@ -1,0 +1,250 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, header, hgroup, nav, section, article, aside, footer, figure, figcaption, menu, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 16px/1.5 "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: # -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+li {
+    list-style: none;
+}
+input, button, textarea, select {
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+textarea{
+    resize: none;
+}
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+    -webkit-touch-callout: none;
+    text-decoration: none;
+    outline: 0;
+}
+em, i {
+    font-style: normal;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* em {
+  color: #f28c48;
+}
+*/
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+.icon {
+    display: inline-block;
+    background-image: url(../images/icon-home.png?v1);
+    -webkit-background-size: 60px auto;
+    background-size: 60px auto;
+    background-repeat: no-repeat;
+}
+.border-t1px, .border-b1px {
+    position: relative;
+}
+.border-t1px:after, .border-b1px:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    pointer-events: none;
+    bottom: 0;
+}
+.border-b1px:after {
+    border-bottom: 1px solid #dedfe0;
+}
+.border-t1px:after {
+    border-top: 1px solid #dedfe0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .border-t1px:after,.border-b1px:after {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5);
+    }
+}
+.center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    /*垂直*/
+    
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /*水平*/
+    
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.95);
+}
+.main-nav {
+    height: 54px;
+}
+.main-nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 4px 0;
+}
+.main-nav ul li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    color: #888;
+    font-size: 0;
+}
+.main-nav ul li span {
+    display: block;
+    font-size: 12px;
+}
+.btn-addFriend {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background: #ee5c64;
+}
+.main-nav .icon{
+    width: 27px;
+    height: 27px; 
+    position: relative;   
+}
+.icon-home {
+    background-position: -1px -51px;
+}
+.icon-friend {
+    background-position: -1px -80px;
+}
+.icon-msg {
+    background-position: -1px -106px;
+}
+.icon-mine {
+    background-position: -1px -132px;
+}
+.main-nav .icon-addFriend{
+  width: 20px;height: 20px;
+  background-position: -36px -25px;
+  margin-top: 12px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.icon-addFriend:active{
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.active-1 li:nth-child(1) span,
+.active-2 li:nth-child(2) span,
+.active-3 li:nth-child(4) span,
+.active-4 li:nth-child(5) span{
+  color: #ee5c64;
+}
+.active-1 .icon-home{
+  background-position: -30px -51px;
+}
+.active-2 .icon-friend{
+  background-position: -30px -80px;
+}
+.active-3 .icon-msg{
+  background-position: -30px -106px;
+}
+.active-4 .icon-mine{
+  background-position: -30px -132px;
+}
+.new-1 .icon-home:after,
+.new-2 .icon-friend:after,
+.new-3 .icon-msg:after,
+.new-4 .icon-mine:after{
+    content:' ';
+    display: inline-block;
+    width: 9px;height: 9px;overflow: hidden;
+    position: absolute;
+    background: #EE5C64;
+    border-radius: 5px;
+    top: 0;
+    right: -5px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.btn {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    background: #F05B61;
+    color: #fff;
+    border-radius: 5px;
+}
+.btn-gray {
+    border: 1px solid #DADADA;
+    background: #F1F1F1;
+    color: #646464;
+}
+.btn-fluid .btn {
+    width: 100%;
+}
+.btns-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.btns-item .btn {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    margin-right: 40px;
+}
+.btns-item .btn:last-child {
+    margin-right: 0;
+}
+.btn:active {
+    background: #C6484D;
+}
+.btn-gray:active {
+    background: #E0E0E0;
+}

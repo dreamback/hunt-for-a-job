@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>发布预览</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/single.css">
+</head>
+
+<body>
+    <div class="slide-wrapper" id="mySwipe">
+        <ul>
+            <li style="background-image: url(images/1.jpg)"></li>
+            <li style="background-image: url(images/2.jpg)"></li>
+            <li style="background-image: url(images/3.jpg)"></li>
+        </ul>
+        <div class="slide-dot" id="dot"></div>
+        <div class="user-info">
+            <!-- 类名 icon-sex-0 图标变男性-->
+            <h3>小乔<i class="icon icon-sex-1"></i></h3>
+            <p>25岁<span></span>163cm<span></span><i class="icon icon-address"></i>上海-浦东</p>
+        </div>
+    </div>
+    <dl class="suggestion">
+        <dt>推荐语：</dt>
+        <dd>美丽善良、年轻有为、80后、跟我是同事,性格真的好好,喜欢就赶紧行动吧~</dd>
+    </dl>
+    <div class="btn-wrapper">
+    	<div class="btn-fluid">
+    	    <input class="btn" type="button" value="确定">
+    	</div>
+    	<div class="btn-fluid">
+    	    <input class="btn btn-gray" type="button" value="再次编辑">
+    	</div>
+    </div>
+    <script src="../src/js/libs/zepto.min.js"></script>
+    <script src="../src/js/widget/swipe/swipe.js"></script>
+    <script>
+    var dot = $('#dot');
+    dot.html(new Array($('#mySwipe li').size() + 1).join('<span></span>'));
+    dot = dot.find('span');
+    dot.eq(0).addClass('current');
+    var mySwipe = Swipe(document.querySelector('#mySwipe'), {
+        // startSlide: 4,
+        auto: 3000,
+        // continuous: true,
+        // disableScroll: true,
+        // stopPropagation: true,
+        // callback: function(index, element) {},
+        transitionEnd: function(index, element) {
+            dot.removeClass().eq(dot.size() < 3 ? index % 2 : index).addClass('current');
+        }
+    });
+    </script>
+</body>
+
+</html>

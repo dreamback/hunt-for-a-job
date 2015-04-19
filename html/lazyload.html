@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <style>
+    	li{height: 220px;}
+		img{
+			opacity: 0;
+			-webkit-transition: opacity .3s;
+			transition: opacity .3s;
+		}
+    </style>
+</head>
+
+<body>
+    <ul id="Lazyload">
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t553/340/1229316568/219707/ac9c7725/54c1b0b2N44c69897.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t451/330/1282290433/195283/1b9371b8/54c5e01cNbd2bfa44.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t418/123/199077931/129672/d56d1b45/54101a76Nb4b4fe2e.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t550/246/1388864362/159665/114846cf/54c1bcb5Nc1906ebb.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img12.360buyimg.com/n7/jfs/t232/237/1525762197/87337/a2d2815d/53fc0134N504a7f19.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img11.360buyimg.com/n7/jfs/t169/32/1030711473/279276/f56bb1cc/53a0fc12N1e73f864.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img13.360buyimg.com/n7/jfs/t337/86/1444843089/251715/24ae1f6f/543b3cbdN2305ee8f.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img11.360buyimg.com/n7/jfs/t616/86/150351444/455229/a1c75728/5451d8a7Nc032f793.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img11.360buyimg.com/n7/jfs/t583/224/1217201621/209423/7a5c8b93/54c1db47N92f1ccfd.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img14.360buyimg.com/n7/jfs/t568/255/1266948737/300060/1f07600b/54bdf468Ncf99efe5.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img14.360buyimg.com/n7/jfs/t187/64/1395719493/316468/6d980c0f/53ab86b7N3f2aa2b7.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t184/280/913974502/147603/8def476e/539d1428N993f0096.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t184/280/913974502/147603/8def476e/539d1428N993f0096.jpg" />
+        </li>
+        <li>
+            <img data-src="http://img10.360buyimg.com/n7/jfs/t778/185/548117472/152963/348dd452/54be233eNd4eb93aa.jpg" />
+        </li>
+    </ul>
+    <script src="//images.zastatic.com/js/libs/zepto.min.js"></script>
+    <script src="//images.zastatic.com/js/widget/lazyload.js"></script>
+	<script>
+	$('#Lazyload img').lazyload(0, function(){
+		var img = this;
+		img.onload = function(){
+			img.style.opacity=1;
+		}
+	});
+	</script>
+</body>
+
+</html>

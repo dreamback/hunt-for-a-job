@@ -1,0 +1,112 @@
+.ISelector * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ISelector {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+.ISelector.active {
+    background-color: rgba(0, 0, 0, .5);
+}
+.ISelector.active .ISelector-box {
+    -webkit-transform: translate(0, 0) translateZ(0);
+    transform: translate(0, 0) translateZ(0);
+}
+.ISelector-box {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 10px 0;
+    -webkit-transform: translate(0, 100%) translateZ(0);
+    transform: translate(0, 100%) translateZ(0);
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+.ISelector-box ul {
+    list-style: none;
+}
+.ISelector-box ul{
+	height:;
+}
+.ISelector-box li.active {
+    color: #EE5C64;
+}
+.ISelector-box li.active:before {
+    content: " ";
+    width: 3px;
+    height: 3px;
+    border-width: 1px;
+    position: absolute;
+    border-color: #EE5C64 #EE5C64 transparent transparent;
+    border-style: solid solid dashed dotted;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 0;
+    top: 20px;
+}
+.ISelector-box li {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.ISelector-box li:active {
+    background-color: #eee;
+}
+.ISelector-box li:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    pointer-events: none;
+    bottom: 0;
+    border-bottom: 1px solid #dedfe0;
+}
+.ISelector-box li:last-child:after {
+    display: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .ISelector-box li:after {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5);
+    }
+}
+.ISelector-btn {
+    display: block;
+    text-align: center;
+    background-color: #B3B0B0;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+.ISelector-btn:active{
+	background-color: #A2A2A2;
+}
+.ISelector-IScroll{
+	/*margin-bottom: 10px;*/
+	max-height: 225px;
+	overflow: hidden;
+}

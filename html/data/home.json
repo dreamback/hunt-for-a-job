@@ -1,0 +1,179 @@
+[
+	{
+		"id":"4354235",
+		"name":"潇洒小姐1",
+		"pic":"../src/images/avator.png",
+		"relation":"闺蜜",
+		"friends":[
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧1！",
+				"degree":"本科",
+				"age":28,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			}
+		]
+	},
+	{
+		"id":"4354235",
+		"name":"潇洒小姐2",
+		"pic":"../src/images/avator.png",
+		"relation":"好友",
+		"friends":[
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧1！",
+				"degree":"本科",
+				"age":28,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			}
+		]
+	},
+	{
+		"id":"4354235",
+		"name":"潇洒小姐3",
+		"pic":"../src/images/avator.png",
+		"relation":"发小",
+		"friends":[
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"1111她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧1！",
+				"degree":"本科",
+				"age":28,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"2222她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			}
+		]
+	},
+	{
+		"id":"4354235",
+		"name":"潇洒小姐4",
+		"pic":"../src/images/avator.png",
+		"relation":"好友",
+		"friends":[
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧1！",
+				"degree":"本科",
+				"age":28,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧2！",
+				"degree":"本科",
+				"age":22,
+				"height":175,
+				"address":"广东 | 广州"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			},
+			{	"id":"3424234",
+				"pic":"../src/images/avator.png",
+				"sex": 0,
+				"desc":"她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧3！",
+				"degree":"本科",
+				"age":29,
+				"height":165,
+				"address":"广东 | 深圳"
+			}
+		]
+	}
+]
+

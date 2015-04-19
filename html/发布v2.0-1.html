@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>填写信息1/2</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/postUser_v2.css">
+    <link rel="stylesheet" href="../src/js/widget/modal/modal.css">
+    <link rel="stylesheet" href="../src/js/widget/selector/iselector.css">
+    <link rel="stylesheet" href="../src/js/widget/address2/address2.css">
+    <link rel="stylesheet" href="../src/js/widget/datePicker/datePicker.css">
+</head>
+
+<body>
+    <div class="form-group form-group-offset border-t1px border-b1px">
+        <div class="form-group-item">
+            <i class="form-icon"></i>
+            <div class="form-wrap border-b1px">
+                <label>你们的关系：</label>
+                <div class="input input-default" id="relation">选择你们的关系</div>
+            </div>
+        </div>
+    </div>
+    <h2 class="form-title">TA的资料</h2>
+    <div class="form-group border-t1px border-b1px">
+        <div class="form-group-item">
+            <i class="form-icon form-icon-me"></i>
+            <div class="form-wrap border-b1px">
+                <label>昵称：</label>
+                <input type="text" placeholder="2-8个字符以上">
+            </div>
+        </div>
+        <div class="form-group-item">
+            <i class="form-icon form-icon-sex"></i>
+            <div class="form-wrap border-b1px">
+                <label>性别：</label>
+                <ul class="gender-radio" id="genderRadio">
+                    <li data-sex="0">男</li>
+                    <li data-sex="1">女</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group-item">
+            <i class="form-icon form-icon-birthday"></i>
+            <div class="form-wrap border-b1px">
+                <label>生日：</label>
+                <input id="Birthday" readonly type="text" placeholder="yyyy-yy-dd">
+            </div>
+        </div>
+        <div class="form-group-item">
+            <i class="form-icon form-icon-height"></i>
+            <div class="form-wrap border-b1px">
+                <label>身高：</label>
+                <div class="input input-default" id="Height">请选择身高</div>
+            </div>
+        </div>
+        <div class="form-group-item">
+            <i class="form-icon form-icon-address"></i>
+            <div class="form-wrap border-b1px">
+                <label>工作地点：</label>
+                <div class="input input-default" id="Address">请选择工作地</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-group-offset border-t1px border-b1px form-group-last">
+        <div class="form-group-item" id="textareaInput">
+            <i class="form-icon form-icon-slogan"></i>
+            <div class="form-wrap border-b1px">
+                <label>推荐语：</label>
+                <i class="icon-mic" id="translateVoice"></i>
+                <span class="counter">
+                    <i class="i">0</i>/60
+                </span>
+                <textarea></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="btn-fluid form-group-offset">
+            <input class="btn" type="button" value="下一步">
+        </div>
+    </div>
+    <input type="hidden" name="AddressInput" id="AddressInput">
+    <input type="hidden" name="GenderInput" id="GenderInput" value="">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="../src/js/libs/zepto.min.js"></script>
+    <script src="../src/js/libs/iscroll.js"></script>
+    <script src="../src/js/widget/modal/modal.js"></script>
+    <script src="../src/js/widget/selector/iselector.js"></script>
+    <script src="../src/js/widget/address2/address2.js"></script>
+    <script src="../src/js/widget/address2/data.js"></script>
+    <script src="../src/js/widget/datePicker/datePicker.js"></script>
+    <script src="../src/js/postUser_v2.js"></script>
+
+    <script>
+    var postUser = new PostUser({
+        textareaInput: '#textareaInput',
+        translateVoice: '#translateVoice',
+        genderRadio: '#genderRadio li',
+        genderInput: '#GenderInput'
+    });
+    postUser.init();
+    var relationData = [
+        [0, '朋友'],
+        [1, '父母'],
+        [2, '亲戚'],
+        [3, '同事'],
+        [4, '闺蜜'],
+        [5, '同学']
+    ];
+
+    var heightData = [
+        ['129', '130cm以下']
+    ];
+    (function() {
+        for (var i = 130; i <= 210; i++) {
+            heightData.push([i, i + 'cm']);
+        }
+        heightData.push([211, '210cm以上']);
+    })();
+
+    var iRelation = new ISelector({
+        target: '#relation',
+        data: relationData,
+        value: null,
+        hiddenInput: '#relationInput',
+        callback: function() {
+
+        }
+    });
+
+    var iHeight = new ISelector({
+        target: '#Height',
+        data: heightData,
+        value: null,
+        hiddenInput: '#heightInput',
+        callback: function() {
+
+        },
+        showCallback: function(iscroll){
+           if(!this.value){
+                var defaultVal = $('#GenderInput').val();
+                defaultVal = [170,160][defaultVal===''?1:defaultVal];
+                iscroll.scrollToElement(document.querySelector('.ISelector-IScroll li[data-val="'+defaultVal+'"]'), 1000);
+           }
+        }
+    });
+
+    var address = new IAddress({
+        textInput: $('#Address'),
+        valueInput: $('#AddressInput'),
+        callback: function() {
+            this.textInput.removeClass('input-default');
+        }
+    });
+
+    var curYear = new Date().getFullYear();
+    $('#Birthday').datePicker({
+        beginyear: curYear - 90,
+        endyear: curYear - 18,
+        theme: 'date',
+        defaultValue: '1990-10-02'
+    });
+    </script>
+
+    <script>
+    //微信测试配置
+    // wx.config({
+    //     debug: true,
+    //     appId: 'wx585e742194dc5622',
+    //     timestamp: 1428397840,
+    //     nonceStr: 'd4vVj8xRL8u6VHlw',
+    //     signature: 'e7b53a3f695ba99c636b6f75671b95c23b6e05dd',
+    //     jsApiList: ['startRecord', 'stopRecord', 'translateVoice', 'onVoiceRecordEnd']
+    // });
+    // wx.ready(function() {
+    //     wx.startRecord({
+    //         cancel: function() {
+    //             alert('用户拒绝授权录音');
+    //         }
+    //     });
+    // });
+    </script>
+    <script>
+    function getLocation(success, error) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error);
+            return true;
+        } else {
+            return '该浏览器不支持获取地理位置';
+        }
+    };
+
+    getLocation(function(position) {
+
+        alert(position.coords.latitude + '-' + position.coords.longitude);
+
+    }, function(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                console.error("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.error("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                console.error("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                console.error("An unknown error occurred.");
+                break;
+        }
+    });
+    </script>
+</body>
+
+</html>

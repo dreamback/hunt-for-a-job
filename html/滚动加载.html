@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <style>
+        input{display: block;width: 100%;}
+    </style>
+</head>
+
+<body>
+    <script src="../src/js/libs/zepto.min.js"></script>
+    <script src="../src/js/libs/template.js"></script>
+    <script src="../src/js/widget/scroll_load.js"></script>
+
+    <section class="msg_container">
+        <ul id="MsgList"></ul>
+        <input id="ScrollLoadView" type="button" value="点击加载更多" class="add_more_btn" />
+    </section>
+    <!-- 模版示例，支持原生js语法 -->
+    <script type="text/tpl" id="MsgListTpl">
+        <# for(var i=0, len=data.length; i<len; i++){#>
+            inData:<#=id#><br />
+            昵称：<#=data[i].name#><br />
+            性别：<#=['男','女'][data[i].sex]#><br/>
+            年龄：<#=data[i].age#><br />
+            地址：<#=data[i].address#>
+            <hr />
+        <# } #>
+    </script>
+    <script>
+    new ScrollLoad({
+        url: './scroll-data.php',
+        data: {
+            memmberid: 1,
+            pageNo: 1,
+            pageSize: 8
+        },
+        dataType: 'json',
+        template: 'MsgListTpl',
+        target: 'MsgList',
+        view: 'ScrollLoadView',
+        inData: {
+            id: 234234
+        }, //自定义模版变量，不能为data
+        filter: function(data) {
+            //data = []; // 修改异步返回的值
+            // return false;将停止插入数据
+        },
+        complete: function(data) {
+
+        }
+    });
+    </script>
+</body>
+
+</html>

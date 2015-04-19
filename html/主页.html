@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/global.css?v2v">
+    <link rel="stylesheet" href="../src/css/home.css?vv2">
+</head>
+
+<body class="home-body">
+    <div class="home-nav">
+        <div class="my-avator" style="background-image: url(../src/images/avator.png)">
+        </div>
+        <ul class="top-tab">
+            <li>全部</li>
+            <li class="active">朋友圈</li>
+            <li>收藏</li>
+        </ul>
+    </div>
+
+    <div class="matchers-list">
+
+        <div class="matcher-info">
+            <span class="linear"></span>
+            <div class="matcher-info-wrap">
+                <div class="matcher-avator" style="background-image:url(../src/images/avator.png)">
+                    <i>红娘</i>
+                </div>
+                <div class="text">
+                    <h3>潇洒小姐</h3>
+                    <p>在帮闺蜜找对象</p>
+                </div>
+                <a href="javascript:;" class="icon icon-send"></a>
+            </div>
+            <span class="linear reverse"></span>
+        </div>
+        <div class="swipe-wrap">
+            <div class="swipe-tab">
+                <ul>
+                    <li style="background-image:url(../src/images/avator.png)" class="active"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="swipe-content">
+				<ul>
+					<li class="friend-card">
+						<div class="desc border-b1px">
+							她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧！
+						</div>
+						<div class="pic" style="background-image:url(../src/images/avator.png)"></div>
+						<div class="detail">
+							<h3>泷泽</h3>
+							<p><i class="icon icon-info"></i>本科  29岁  165cm </p>
+							<p><i class="icon icon-address"></i>广东 | 深圳</p>
+							<a href="javascript:;" class="btn"><i class="icon icon-collect"></i></a>
+							<a href="javascript:;" class="btn"><i class="icon icon-share"></i></a>
+						</div>
+					</li>
+				</ul>
+            </div>
+        </div>
+
+        <div class="matcher-info">
+            <span class="linear"></span>
+            <div class="matcher-info-wrap">
+                <div class="matcher-avator" style="background-image:url(../src/images/avator.png)">
+                    <i>红娘</i>
+                </div>
+                <div class="text">
+                    <h3>潇洒小姐</h3>
+                    <p>在帮闺蜜找对象</p>
+                </div>
+                <a href="javascript:;" class="icon icon-send"></a>
+            </div>
+            <span class="linear reverse"></span>
+        </div>
+        <div class="swipe-wrap">
+            <div class="swipe-tab">
+                <ul>
+                    <li style="background-image:url(../src/images/avator.png)" class="active"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                    <li style="background-image:url(../src/images/avator.png)"><i class="icon icon-single"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="swipe-content">
+				<ul>
+					<li class="friend-card">
+						<div class="desc border-b1px">
+							她是一位有爱心，内心充满阳光和正能量的人喜欢她的就赶紧联系我吧！
+						</div>
+						<div class="pic" style="background-image:url(../src/images/avator.png)"></div>
+						<div class="detail">
+							<h3>泷泽</h3>
+							<p><i class="icon icon-info"></i>本科  29岁  165cm </p>
+							<p><i class="icon icon-address"></i>广东 | 深圳</p>
+							<a href="javascript:;" class="btn"><i class="icon icon-collect"></i></a>
+							<a href="javascript:;" class="btn"><i class="icon icon-share"></i></a>
+						</div>
+					</li>
+				</ul>
+            </div>
+        </div>
+
+    </div>
+
+	<nav class="main-nav">
+		<div class="fixed-nav border-t1px">
+			<ul>
+				<li><i class="icon icon-home"></i><span>首页</span></li>
+				<li><i class="icon icon-friend"></i><span>好友</span></li>
+				<li>
+					<a href="" class="btn-addFriend">
+						<i class="icon icon-addFriend"></i>
+					</a>
+				</li>
+				<li><i class="icon icon-msg"></i><span>消息</span></li>
+				<li><i class="icon icon-mine"></i><span>我的</span></li>
+			</ul>
+		</div>
+	</nav>
+
+    <script>
+    var userAgent = navigator.userAgent,
+        browser = {
+            iPhone: userAgent.indexOf('iPhone') > -1,
+            android: userAgent.indexOf('Android') > -1
+        }
+    var memberId = 12323423;
+    var isContact = 0;
+    /**
+     *  @isContact [通讯录开关] {Number}
+     *  0  提示用户弹层，获取通讯录，并且提交
+     *  1  不提示用户，获取通讯录，并且提交
+     *  2  不提示，不提交
+     */
+    function getMemmbersContactsBridge(memberId,isContact) {
+        window.location = "iphone://jump?tag=12&memberId=" + memberId + "&isContact=" + isContact;
+    }
+
+    function setMemmbersContactsCallback(status) {
+
+    }
+
+    if(browser.android){
+    	window.callNative.uploadContactsToServer(memberId,isContact);
+    }else if(browser.iPhone){
+    	getMemmbersContactsBridge(memberId,isContact);
+    }
+    </script>
+</body>
+
+</html>
